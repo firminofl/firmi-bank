@@ -5,14 +5,14 @@ phases:
       nodejs: 12
     commands:
       - cd firm-bank-frontend/
-      - echo <<<<..Install node_modules..>>>>
+      - echo Install node_modules
       - npm config set strict-ssl false
       - npm install
   build:
     commands:
-      - echo <<<<..Building the project..>>>>
+      - echo Building the project
       - npm run build
-      - echo <<<<..Finished the build project..>>>>
+      - echo Finished the build project
 artifacts:
   files:
     - '**/*'
