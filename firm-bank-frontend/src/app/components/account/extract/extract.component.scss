@@ -1,3 +1,57 @@
-table {
-    width: 100%;
+.heart {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 100px;
+    background: #49a7f6;
+    animation: pulse 1s infinite alternate;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d54273;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: #d54273;
+}
+
+.top {
+    top: 100px;
+}
+
+.left {
+    left: 100px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9) rotate(-135deg);
+    }
+
+    100% {
+        transform: scale(1.1) rotate(-135deg);
+    }
+}
+
+.title {
+    margin: 20px 5px 0px 20px;
+    font-size: 45px;
+}
+
+.loading {
+    margin: 20px 5px 0px 20px;
+    position: absolute;
+}
+
+h3 {
+    font-weight: bold;
 }

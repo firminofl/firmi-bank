@@ -28,10 +28,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ExtractComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+  loading = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.loadingPage()
+  }
+
+  loadingPage(): void {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2500)
   }
 
 }
