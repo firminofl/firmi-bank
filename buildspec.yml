@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - cd firm-bank-frontend/
+      - echo <<<<..Install node_modules..>>>>
+      - npm install
+  build:
+    commands:
+      - echo <<<<..Building the project..>>>>
+      - npm config set strict-ssl false
+      - npm run build
+      - echo <<<<..Finished the build project..>>>>
+artifacts:
+  files:
+    - '**/*'
+  base-directory: '**/dist/firm-bank-frontend'
